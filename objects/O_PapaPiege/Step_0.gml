@@ -23,7 +23,7 @@ var l5726CD58_0 = collision_ellipse(x + -(TaillePCercle*(ScaleGCercle*TailleGCer
 	/// @DnDVersion : 1
 	/// @DnDHash : 0E17835B
 	/// @DnDParent : 5726CD58
-	/// @DnDArgument : "code" "/// @description Execute Code$(13_10)var Angle = degtorad(point_direction(x,y,O_Personnage.x,O_Personnage.y))$(13_10)var DistanceMax = (TaillePCercle*(ScaleGCercle*TailleGCercle)) - (ScalePCercle*TaillePCercle);$(13_10)show_debug_message(ScalePCercle*TaillePCercle)$(13_10)var xobject = x+(ScalePCercle*TaillePCercle)*cos(Angle);$(13_10)var yobject = y-(ScalePCercle*TaillePCercle)*sin(Angle)+(ScalePCercle*TaillePCercle);$(13_10)var DistanceActu = point_distance(O_Personnage.x,O_Personnage.y,xobject,yobject);$(13_10)var xobjectmax = x+(ScalePCercle*TaillePCercle)*cos(degtorad(0));$(13_10)var yobjectmax = y-(ScalePCercle*TaillePCercle)*sin(degtorad(90))+(ScalePCercle*TaillePCercle);$(13_10)var xobjectmin = x+(ScalePCercle*TaillePCercle)*cos(degtorad(180));$(13_10)var yobjectmin = y-(ScalePCercle*TaillePCercle)*sin(degtorad(270))+(ScalePCercle*TaillePCercle);$(13_10)if((O_Personnage.x>xobjectmin) and (O_Personnage.x<xobjectmax) and (O_Personnage.y>yobjectmax) and (O_Personnage.y<yobjectmin)){$(13_10)	O_Personnage.PEUR = 100;$(13_10)}$(13_10)else{$(13_10)	O_Personnage.PEUR = 100-(DistanceActu*100/DistanceMax)}$(13_10)	$(13_10)if(O_Personnage.PEUR>O_Personnage.MaxPEUR){$(13_10)	O_Personnage.PEUR = O_Personnage.MaxPEUR;$(13_10)}"
+	/// @DnDArgument : "code" "/// @description Execute Code$(13_10)var Angle = degtorad(point_direction(x,y,O_Personnage.x,O_Personnage.y))$(13_10)var DistanceMax = (TaillePCercle*(ScaleGCercle*TailleGCercle)) - (ScalePCercle*TaillePCercle);$(13_10)show_debug_message(ScalePCercle*TaillePCercle)$(13_10)var xobject = x+(ScalePCercle*TaillePCercle)*cos(Angle);$(13_10)var yobject = y-(ScalePCercle*TaillePCercle)*sin(Angle)+(ScalePCercle*TaillePCercle);$(13_10)var DistanceActu = point_distance(O_Personnage.x,O_Personnage.y,xobject,yobject);$(13_10)var xobjectmax = x+(ScalePCercle*TaillePCercle)*cos(degtorad(0));$(13_10)var yobjectmax = y-(ScalePCercle*TaillePCercle)*sin(degtorad(90))+(ScalePCercle*TaillePCercle);$(13_10)var xobjectmin = x+(ScalePCercle*TaillePCercle)*cos(degtorad(180));$(13_10)var yobjectmin = y-(ScalePCercle*TaillePCercle)*sin(degtorad(270))+(ScalePCercle*TaillePCercle);$(13_10)if((O_Personnage.x>xobjectmin) and (O_Personnage.x<xobjectmax) and (O_Personnage.y>yobjectmax) and (O_Personnage.y<yobjectmin)){$(13_10)	O_Personnage.PEUR = 100;$(13_10)}$(13_10)else{$(13_10)	O_Personnage.PEUR = 100-(DistanceActu*100/DistanceMax)}$(13_10)	$(13_10)O_Personnage.PEUR = clamp(O_Personnage.PEUR, 0, O_Personnage.MaxPEUR)"
 	/// @description Execute Code
 	var Angle = degtorad(point_direction(x,y,O_Personnage.x,O_Personnage.y))
 	var DistanceMax = (TaillePCercle*(ScaleGCercle*TailleGCercle)) - (ScalePCercle*TaillePCercle);
@@ -41,16 +41,4 @@ var l5726CD58_0 = collision_ellipse(x + -(TaillePCercle*(ScaleGCercle*TailleGCer
 	else{
 		O_Personnage.PEUR = 100-(DistanceActu*100/DistanceMax)}
 		
-	if(O_Personnage.PEUR>O_Personnage.MaxPEUR){
-		O_Personnage.PEUR = O_Personnage.MaxPEUR;
-	}}
-
-/// @DnDAction : YoYo Games.Common.Else
-/// @DnDVersion : 1
-/// @DnDHash : 0F8FB05E
-else{	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 61CAF8DC
-	/// @DnDParent : 0F8FB05E
-	/// @DnDArgument : "var" "O_Personnage.PEUR"
-	O_Personnage.PEUR = 0;}
+	O_Personnage.PEUR = clamp(O_Personnage.PEUR, 0, O_Personnage.MaxPEUR)}

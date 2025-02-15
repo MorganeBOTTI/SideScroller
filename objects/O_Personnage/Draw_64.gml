@@ -3,14 +3,16 @@
 /// @DnDHash : 48A62E6D
 /// @DnDArgument : "var" "PV"
 /// @DnDArgument : "value" "3"
-if(PV == 3){	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite
+if(PV == 3){	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 	/// @DnDVersion : 1
-	/// @DnDHash : 13F260FD
+	/// @DnDHash : 7282C4F2
 	/// @DnDParent : 48A62E6D
 	/// @DnDArgument : "y" "100"
+	/// @DnDArgument : "xscale" "0.09"
+	/// @DnDArgument : "yscale" "0.09"
 	/// @DnDArgument : "sprite" "S_FullLife"
 	/// @DnDSaveInfo : "sprite" "S_FullLife"
-	draw_sprite(S_FullLife, 0, 0, 100);}
+	draw_sprite_ext(S_FullLife, 0, 0, 100, 0.09, 0.09, 0, $FFFFFF & $ffffff, 1);}
 
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1
@@ -21,27 +23,31 @@ else{	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDParent : 3FE4F82E
 	/// @DnDArgument : "var" "PV"
 	/// @DnDArgument : "value" "2"
-	if(PV == 2){	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite
+	if(PV == 2){	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 		/// @DnDVersion : 1
-		/// @DnDHash : 31CA6B9C
+		/// @DnDHash : 506EEFE2
 		/// @DnDParent : 5F8456F4
 		/// @DnDArgument : "y" "100"
+		/// @DnDArgument : "xscale" "0.09"
+		/// @DnDArgument : "yscale" "0.09"
 		/// @DnDArgument : "sprite" "S_MidLife"
 		/// @DnDSaveInfo : "sprite" "S_MidLife"
-		draw_sprite(S_MidLife, 0, 0, 100);}
+		draw_sprite_ext(S_MidLife, 0, 0, 100, 0.09, 0.09, 0, $FFFFFF & $ffffff, 1);}
 
 	/// @DnDAction : YoYo Games.Common.Else
 	/// @DnDVersion : 1
 	/// @DnDHash : 0321D44E
 	/// @DnDParent : 3FE4F82E
-	else{	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite
+	else{	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 		/// @DnDVersion : 1
-		/// @DnDHash : 77A7A118
+		/// @DnDHash : 48389FD8
 		/// @DnDParent : 0321D44E
 		/// @DnDArgument : "y" "100"
+		/// @DnDArgument : "xscale" "0.09"
+		/// @DnDArgument : "yscale" "0.09"
 		/// @DnDArgument : "sprite" "S_LowLife"
 		/// @DnDSaveInfo : "sprite" "S_LowLife"
-		draw_sprite(S_LowLife, 0, 0, 100);}}
+		draw_sprite_ext(S_LowLife, 0, 0, 100, 0.09, 0.09, 0, $FFFFFF & $ffffff, 1);}}
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
 /// @DnDVersion : 1
