@@ -46,9 +46,9 @@ if(PEUR >= 99){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 28390E89
 		/// @DnDParent : 4752E4DA
-		/// @DnDArgument : "steps" "400"
+		/// @DnDArgument : "steps" "90"
 		/// @DnDArgument : "alarm" "1"
-		alarm_set(1, 400);}}
+		alarm_set(1, 90);}}
 
 /// @DnDAction : YoYo Games.Collisions.If_Object_At
 /// @DnDVersion : 1.1
